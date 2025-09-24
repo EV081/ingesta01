@@ -1,10 +1,11 @@
 import boto3
 
 ficheroUpload = "data.csv"
-nombreBucket = "gcr-output-01"
+nombreBucket = "vssz-storage"
 
 s3 = boto3.client('s3')
-response = s3.upload_file(ficheroUpload, nombreBucket, ficheroUpload)
+response = s3.upload_file(ficheroUpload, nombreBucke, "ingesta/" + ficheroUpload)
 print(response)
+
 
 print("Ingesta completada")
